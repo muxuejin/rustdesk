@@ -2319,7 +2319,7 @@ impl LoginConfigHandler {
             display_name = crate::username();
         }
         #[cfg(not(target_os = "android"))]
-        let my_platform = whoami::platform().to_string();
+        let my_platform = hbb_common::whoami::platform().to_string();
         #[cfg(target_os = "android")]
         let my_platform = "Android".into();
         let hwid = if self.get_option("trust-this-device") == "Y" {
